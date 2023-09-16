@@ -24,7 +24,7 @@ app.post("/submit", (req, res) => {
   res.render("index.ejs", {band: bandName})
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Listening on port ${port}`);
 });
 
